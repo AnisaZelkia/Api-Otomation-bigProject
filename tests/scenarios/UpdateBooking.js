@@ -4,9 +4,12 @@ import * as data from '$root/data/user.data';
 import { getParams} from '$helper/lib-api';
 
 
-describe('BOOKING ID LIST', () => {
-    it('Should successfull get the booking of data ', async () => {
-        const response = await HerokuApi.bookingget(data.bookingdata);
+describe('PUT Booking Data ID 3', () => {
+    it('Should successfull PUT the booking of data with id = 3', async () => {
+        const response = await HerokuApi.bookingput(data.bookingupdate);
         assert.equal(response.status, 200);
+
+
+        
     });
 });

@@ -8,7 +8,7 @@ export const BOOKING_PARAM = {
     id : 1
 }
 export const delParam = {
-    id : 2
+    "id":"2"
 }
 
 export const bookingdata = 
@@ -23,6 +23,17 @@ export const bookingdata =
     },
     "additionalneeds": "Lunch"
 }
- 
 
-
+export const bookingupdate = 
+{
+   
+    "firstname": "James",
+    "lastname": "Brown",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "Breakfast"
+}
