@@ -1,11 +1,11 @@
 import { assert } from "chai";
-import ReqresApi from "../pages/reqres.api";
+import HerokuApi from "../pages/heroku.api";
 import * as data from "../data/user.data"
 
 describe('Auth', () =>{
 
     it.only('Should successful login when insert valid data', async () => {
-        const response = await ReqresApi.auth(data.valid_login);
+        const response = await HerokuApi .auth(data.valid_login);
 
         assert.equal(response.status, 200);
 
