@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-12-26T17:52:43.600Z",
-    "end": "2022-12-26T17:52:44.933Z",
-    "duration": 1333,
+    "failures": 1,
+    "start": "2022-12-26T18:21:05.974Z",
+    "end": "2022-12-26T18:21:07.294Z",
+    "duration": 1320,
     "testsRegistered": 1,
-    "passPercent": 100,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "13023bfe-80e3-4422-9479-6c6b51c8bb0f",
+      "uuid": "bfacda22-ef04-470c-b448-93d5caf5346e",
       "title": "",
       "fullFile": "D:\\api-herokuapp\\Api-Otomation-bigProject\\tests\\scenarios\\partial-update-booking.test.js",
       "file": "\\tests\\scenarios\\partial-update-booking.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6e6df0f8-0436-42d6-b37a-cef7f3ca1ca5",
+          "uuid": "be6e95dd-4867-4c92-81b6-264ce649e3e9",
           "title": "update Booking partial",
           "fullFile": "D:\\api-herokuapp\\Api-Otomation-bigProject\\tests\\scenarios\\partial-update-booking.test.js",
           "file": "\\tests\\scenarios\\partial-update-booking.test.js",
@@ -38,29 +38,33 @@
               "title": "Must successfully make a reservation when entering valid data",
               "fullTitle": "update Booking partial Must successfully make a reservation when entering valid data",
               "timedOut": false,
-              "duration": 1316,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 1299,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
-              "code": "const param = getParams(data.bookingdatapartial);\nconst response = await HerokuApi.booking(param);\nassert.equal(response.status, 200);",
-              "err": {},
-              "uuid": "a7ce2ae5-ef76-4ec7-a726-051290de507d",
-              "parentUUID": "6e6df0f8-0436-42d6-b37a-cef7f3ca1ca5",
+              "code": "const param = getParams(data.bookingdatapartial);\nconst response = await HerokuApi.createbooking(param);\nassert.equal(response.status, 200);\n//console.log(response.data)",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///D:/api-herokuapp/Api-Otomation-bigProject/tests/scenarios/partial-update-booking.test.js:12:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "5bc74481-e9e5-4ed0-85fd-bc760a5989a7",
+              "parentUUID": "be6e95dd-4867-4c92-81b6-264ce649e3e9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "a7ce2ae5-ef76-4ec7-a726-051290de507d"
+          "passes": [],
+          "failures": [
+            "5bc74481-e9e5-4ed0-85fd-bc760a5989a7"
           ],
-          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1316,
+          "duration": 1299,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
