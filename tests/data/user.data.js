@@ -13,16 +13,25 @@ export const delParam = {
 
 export const bookingdata = 
 { 
-    "firstname": "N1",
-    "lastname": "M1",
-    "totalprice": 111011,
+    "firstname": "diosyy",
+    "lastname": "pratamaa",
+    "totalprice": 11101111,
     "depositpaid": false,
     "bookingdates": {
-        "checkin": "2022-10-01",
-        "checkout": "2022-11-01"
+        "checkin": "2022-1-1",
+        "checkout": "2022-1-5"
     },
-    "additionalneeds": "Lunch"
+    "additionalneeds": "mangann"
+}
+
+export const bookingdatapartial = 
+{
+    "firstname": "dyoo",
+    "lastname": "pratama"
 }
  
+export const BOOKING_PARAM_PARTIAL = {
+    id : 3,
 
+}
 
