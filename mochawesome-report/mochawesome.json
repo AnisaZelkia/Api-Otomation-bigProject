@@ -1,5 +1,6 @@
 {
   "stats": {
+<<<<<<< HEAD
     "suites": 6,
     "tests": 6,
     "passes": 4,
@@ -10,6 +11,18 @@
     "duration": 6436,
     "testsRegistered": 6,
     "passPercent": 66.66666666666666,
+=======
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-12-26T18:21:05.974Z",
+    "end": "2022-12-26T18:21:07.294Z",
+    "duration": 1320,
+    "testsRegistered": 1,
+    "passPercent": 0,
+>>>>>>> 22c0e8db702018125e596ac945bcffbc0d59152d
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,26 +31,38 @@
   },
   "results": [
     {
+<<<<<<< HEAD
       "uuid": "57e6b60c-1c6b-434c-8d4f-6c7f04eb04fa",
+=======
+      "uuid": "bfacda22-ef04-470c-b448-93d5caf5346e",
+>>>>>>> 22c0e8db702018125e596ac945bcffbc0d59152d
       "title": "",
-      "fullFile": "",
-      "file": "",
+      "fullFile": "D:\\api-herokuapp\\Api-Otomation-bigProject\\tests\\scenarios\\partial-update-booking.test.js",
+      "file": "\\tests\\scenarios\\partial-update-booking.test.js",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
+<<<<<<< HEAD
           "uuid": "1850ff43-c19d-4174-b146-6f12e16a2cba",
           "title": "Auth",
           "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\auth.test.js",
           "file": "\\tests\\scenarios\\auth.test.js",
+=======
+          "uuid": "be6e95dd-4867-4c92-81b6-264ce649e3e9",
+          "title": "update Booking partial",
+          "fullFile": "D:\\api-herokuapp\\Api-Otomation-bigProject\\tests\\scenarios\\partial-update-booking.test.js",
+          "file": "\\tests\\scenarios\\partial-update-booking.test.js",
+>>>>>>> 22c0e8db702018125e596ac945bcffbc0d59152d
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Should successful login when insert valid data",
-              "fullTitle": "Auth Should successful login when insert valid data",
+              "title": "Must successfully make a reservation when entering valid data",
+              "fullTitle": "update Booking partial Must successfully make a reservation when entering valid data",
               "timedOut": false,
+<<<<<<< HEAD
               "duration": 1348,
               "state": "passed",
               "speed": "slow",
@@ -117,12 +142,16 @@
               "fullTitle": "Delete BOOKING ID 1 Should successfull delete the booking of data with id = 2",
               "timedOut": false,
               "duration": 769,
+=======
+              "duration": 1299,
+>>>>>>> 22c0e8db702018125e596ac945bcffbc0d59152d
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
+<<<<<<< HEAD
               "code": "const response = await HerokuApi.bookingdel(data.delParam);\nassert.equal(response.status, 200);",
               "err": {
                 "message": "AssertionError: expected 403 to equal 200",
@@ -131,6 +160,16 @@
               },
               "uuid": "f6ce8b78-2e2b-44af-97f6-841d1fd0f809",
               "parentUUID": "c0e7246d-8b07-457b-bbde-eb1d7cae0b3e",
+=======
+              "code": "const param = getParams(data.bookingdatapartial);\nconst response = await HerokuApi.createbooking(param);\nassert.equal(response.status, 200);\n//console.log(response.data)",
+              "err": {
+                "message": "AssertionError: expected 400 to equal 200",
+                "estack": "AssertionError: expected 400 to equal 200\n    at Context.<anonymous> (file:///D:/api-herokuapp/Api-Otomation-bigProject/tests/scenarios/partial-update-booking.test.js:12:16)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": "- 400\n+ 200\n"
+              },
+              "uuid": "5bc74481-e9e5-4ed0-85fd-bc760a5989a7",
+              "parentUUID": "be6e95dd-4867-4c92-81b6-264ce649e3e9",
+>>>>>>> 22c0e8db702018125e596ac945bcffbc0d59152d
               "isHook": false,
               "skipped": false
             }
@@ -138,6 +177,7 @@
           "suites": [],
           "passes": [],
           "failures": [
+<<<<<<< HEAD
             "f6ce8b78-2e2b-44af-97f6-841d1fd0f809"
           ],
           "pending": [],
@@ -264,6 +304,13 @@
           "pending": [],
           "skipped": [],
           "duration": 807,
+=======
+            "5bc74481-e9e5-4ed0-85fd-bc760a5989a7"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 1299,
+>>>>>>> 22c0e8db702018125e596ac945bcffbc0d59152d
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
