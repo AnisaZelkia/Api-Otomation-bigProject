@@ -1,14 +1,14 @@
 {
   "stats": {
-    "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2022-12-26T01:49:08.609Z",
-    "end": "2022-12-26T01:49:10.025Z",
-    "duration": 1416,
-    "testsRegistered": 1,
+    "start": "2022-12-26T02:13:51.305Z",
+    "end": "2022-12-26T02:13:54.107Z",
+    "duration": 2802,
+    "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
@@ -18,16 +18,16 @@
   },
   "results": [
     {
-      "uuid": "1bf4cdd9-da1c-4918-a763-8f5c9a293bea",
+      "uuid": "7813fb6e-e20a-4409-acb8-fa55e55a52d2",
       "title": "",
-      "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\auth.test.js",
-      "file": "\\tests\\scenarios\\auth.test.js",
+      "fullFile": "",
+      "file": "",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "69153860-06c8-4207-9da3-92594f037e0b",
+          "uuid": "ca53cbe8-f259-4c6f-8130-1539834b96ab",
           "title": "Auth",
           "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\auth.test.js",
           "file": "\\tests\\scenarios\\auth.test.js",
@@ -38,7 +38,7 @@
               "title": "Should successful login when insert valid data",
               "fullTitle": "Auth Should successful login when insert valid data",
               "timedOut": false,
-              "duration": 1391,
+              "duration": 1261,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,20 +47,59 @@
               "context": null,
               "code": "const response = await HerokuApi.auth(data.valid_login);\nassert.equal(response.status, 200);",
               "err": {},
-              "uuid": "7fae5822-5ff2-438a-975e-95b927a25d15",
-              "parentUUID": "69153860-06c8-4207-9da3-92594f037e0b",
+              "uuid": "fd5c3fdc-fad9-4fd5-a128-f9433a87819e",
+              "parentUUID": "ca53cbe8-f259-4c6f-8130-1539834b96ab",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7fae5822-5ff2-438a-975e-95b927a25d15"
+            "fd5c3fdc-fad9-4fd5-a128-f9433a87819e"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1391,
+          "duration": 1261,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "1ebf76e8-dd65-49b9-9848-fc4872abf45d",
+          "title": "BOOKING ID 1",
+          "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\getbooking.test.js",
+          "file": "\\tests\\scenarios\\getbooking.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfull get the booking of data with id = 1",
+              "fullTitle": "BOOKING ID 1 Should successfull get the booking of data with id = 1",
+              "timedOut": false,
+              "duration": 1450,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const param = getParams(data.BOOKING_PARAM['id']);\nconst response = await HerokuApi.booking(param);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "573eebd7-644d-4a98-8850-43f45649be5a",
+              "parentUUID": "1ebf76e8-dd65-49b9-9848-fc4872abf45d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "573eebd7-644d-4a98-8850-43f45649be5a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1450,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
