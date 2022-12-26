@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 1,
-    "passes": 0,
+    "passes": 1,
     "pending": 0,
-    "failures": 1,
-    "start": "2022-12-26T01:03:02.088Z",
-    "end": "2022-12-26T01:03:02.100Z",
-    "duration": 12,
+    "failures": 0,
+    "start": "2022-12-26T01:49:08.609Z",
+    "end": "2022-12-26T01:49:10.025Z",
+    "duration": 1416,
     "testsRegistered": 1,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3d2bfac4-0082-4392-a683-14fba067b49a",
+      "uuid": "1bf4cdd9-da1c-4918-a763-8f5c9a293bea",
       "title": "",
       "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\auth.test.js",
       "file": "\\tests\\scenarios\\auth.test.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fc17e1c6-a54c-4daf-ba15-7fd04714a202",
+          "uuid": "69153860-06c8-4207-9da3-92594f037e0b",
           "title": "Auth",
           "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\auth.test.js",
           "file": "\\tests\\scenarios\\auth.test.js",
@@ -38,33 +38,29 @@
               "title": "Should successful login when insert valid data",
               "fullTitle": "Auth Should successful login when insert valid data",
               "timedOut": false,
-              "duration": 1,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 1391,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
-              "code": "const response = await ReqresApi.auth(data.valid_login);\nassert.equal(response.status, 200);",
-              "err": {
-                "message": "TypeError: ReqresApi.auth is not a function",
-                "estack": "TypeError: ReqresApi.auth is not a function\n    at Context.<anonymous> (file:///D:/API-HerokuApp/tests/scenarios/auth.test.js:8:42)\n    at processImmediate (internal/timers.js:464:21)",
-                "diff": null
-              },
-              "uuid": "ef7c5ec2-5491-474f-9b07-6437fbb85a33",
-              "parentUUID": "fc17e1c6-a54c-4daf-ba15-7fd04714a202",
+              "code": "const response = await HerokuApi.auth(data.valid_login);\nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "7fae5822-5ff2-438a-975e-95b927a25d15",
+              "parentUUID": "69153860-06c8-4207-9da3-92594f037e0b",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "ef7c5ec2-5491-474f-9b07-6437fbb85a33"
+          "passes": [
+            "7fae5822-5ff2-438a-975e-95b927a25d15"
           ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1,
+          "duration": 1391,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

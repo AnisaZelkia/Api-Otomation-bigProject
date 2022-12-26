@@ -3,7 +3,7 @@ import BaseApi from "./base.api";
 const HerokuApi = {
     
    
-    login: (data)=>BaseApi.post('/auth', data)
+    auth: (data)=>BaseApi.post('/auth', data)
 
 }
 
