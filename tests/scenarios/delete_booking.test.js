@@ -5,10 +5,12 @@ import { getParams} from '$helper/lib-api';
 
 
 
-describe('BOOKING ID 1', () => {
-    it('Should successfull get the booking of data with id = 1', async () => {
+
+describe('Delete BOOKING ID 1', () => {
+    it('Should successfull delete the booking of data with id = 2', async () => {
         const param = getParams(data.BOOKING_PARAM['id']);
-        const response = await HerokuApi.booking(param);
+        const response = await HerokuApi.bookingdel(param);
+
         assert.equal(response.status, 200);
     });
 });

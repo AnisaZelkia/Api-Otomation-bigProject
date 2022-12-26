@@ -1,15 +1,15 @@
 {
   "stats": {
-    "suites": 2,
-    "tests": 2,
-    "passes": 2,
+    "suites": 4,
+    "tests": 4,
+    "passes": 3,
     "pending": 0,
-    "failures": 0,
-    "start": "2022-12-26T02:13:51.305Z",
-    "end": "2022-12-26T02:13:54.107Z",
-    "duration": 2802,
-    "testsRegistered": 2,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2022-12-26T03:11:46.499Z",
+    "end": "2022-12-26T03:11:50.103Z",
+    "duration": 3604,
+    "testsRegistered": 4,
+    "passPercent": 75,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "7813fb6e-e20a-4409-acb8-fa55e55a52d2",
+      "uuid": "66153d6e-fcb5-4e90-9dcd-606720cc9dd6",
       "title": "",
       "fullFile": "",
       "file": "",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ca53cbe8-f259-4c6f-8130-1539834b96ab",
+          "uuid": "0f9cfa82-d40f-4f98-8dd2-451ac4f3deaa",
           "title": "Auth",
           "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\auth.test.js",
           "file": "\\tests\\scenarios\\auth.test.js",
@@ -38,7 +38,7 @@
               "title": "Should successful login when insert valid data",
               "fullTitle": "Auth Should successful login when insert valid data",
               "timedOut": false,
-              "duration": 1261,
+              "duration": 1182,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,26 +47,69 @@
               "context": null,
               "code": "const response = await HerokuApi.auth(data.valid_login);\nassert.equal(response.status, 200);",
               "err": {},
-              "uuid": "fd5c3fdc-fad9-4fd5-a128-f9433a87819e",
-              "parentUUID": "ca53cbe8-f259-4c6f-8130-1539834b96ab",
+              "uuid": "9870f5ec-2c06-49dd-a453-617d9f1b2c97",
+              "parentUUID": "0f9cfa82-d40f-4f98-8dd2-451ac4f3deaa",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "fd5c3fdc-fad9-4fd5-a128-f9433a87819e"
+            "9870f5ec-2c06-49dd-a453-617d9f1b2c97"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1261,
+          "duration": 1182,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
         },
         {
-          "uuid": "1ebf76e8-dd65-49b9-9848-fc4872abf45d",
+          "uuid": "5fe7a633-4b8a-4d0a-88d1-f499d5a48b72",
+          "title": "Delete BOOKING ID 1",
+          "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\delete_booking.test.js",
+          "file": "\\tests\\scenarios\\delete_booking.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfull delete the booking of data with id = 2",
+              "fullTitle": "Delete BOOKING ID 1 Should successfull delete the booking of data with id = 2",
+              "timedOut": false,
+              "duration": 746,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const param = getParams(data.BOOKING_PARAM['id']);\nconst response = await HerokuApi.bookingdel(param);\nassert.equal(response.status, 200);",
+              "err": {
+                "message": "AssertionError: expected 403 to equal 200",
+                "estack": "AssertionError: expected 403 to equal 200\n    at Context.<anonymous> (file:///D:/API-HerokuApp/tests/scenarios/delete_booking.test.js:14:16)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)",
+                "diff": "- 403\n+ 200\n"
+              },
+              "uuid": "b730b587-354e-4953-b9a3-c480eed956d3",
+              "parentUUID": "5fe7a633-4b8a-4d0a-88d1-f499d5a48b72",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "b730b587-354e-4953-b9a3-c480eed956d3"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 746,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "4bde6af8-7105-4eba-b968-57a03f51a4cd",
           "title": "BOOKING ID 1",
           "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\getbooking.test.js",
           "file": "\\tests\\scenarios\\getbooking.test.js",
@@ -77,7 +120,7 @@
               "title": "Should successfull get the booking of data with id = 1",
               "fullTitle": "BOOKING ID 1 Should successfull get the booking of data with id = 1",
               "timedOut": false,
-              "duration": 1450,
+              "duration": 791,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -86,20 +129,59 @@
               "context": null,
               "code": "const param = getParams(data.BOOKING_PARAM['id']);\nconst response = await HerokuApi.booking(param);\nassert.equal(response.status, 200);",
               "err": {},
-              "uuid": "573eebd7-644d-4a98-8850-43f45649be5a",
-              "parentUUID": "1ebf76e8-dd65-49b9-9848-fc4872abf45d",
+              "uuid": "baa37c20-390b-4a68-9b3c-a4ae777dfd56",
+              "parentUUID": "4bde6af8-7105-4eba-b968-57a03f51a4cd",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "573eebd7-644d-4a98-8850-43f45649be5a"
+            "baa37c20-390b-4a68-9b3c-a4ae777dfd56"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 1450,
+          "duration": 791,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "0cbfbc4c-e12c-4e66-a53d-f8031d233a98",
+          "title": "BOOKING ID LIST",
+          "fullFile": "D:\\API-HerokuApp\\tests\\scenarios\\getListBookingId.test.js",
+          "file": "\\tests\\scenarios\\getListBookingId.test.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Should successfull get the booking of data ",
+              "fullTitle": "BOOKING ID LIST Should successfull get the booking of data ",
+              "timedOut": false,
+              "duration": 839,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await HerokuApi.booking(data.bookingdata);\n    \nassert.equal(response.status, 200);",
+              "err": {},
+              "uuid": "a8e1406b-11d2-419f-a49c-bc12da97dcae",
+              "parentUUID": "0cbfbc4c-e12c-4e66-a53d-f8031d233a98",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8e1406b-11d2-419f-a49c-bc12da97dcae"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 839,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
