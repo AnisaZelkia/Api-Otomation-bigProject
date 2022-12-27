@@ -11,8 +11,8 @@ const HerokuApi = {
     bookingget: (data) => BaseApi.get('/booking', data),
     bookingput: (data) => BaseApi.put('/booking/2', data),
     bookingdel: (data) => BaseApi.delete('/booking/${param}'),
-    createbooking: (data) => BaseApi.post('/booking', data),
-    partialupdatebooking : (data) => BaseApi.patch('/booking/1', data),
+    createbooking: (data) => BaseApi.post('/booking/', data),
+    partialupdatebooking : (data) => BaseApi.patch('/booking/${param}', data),
 
 
 

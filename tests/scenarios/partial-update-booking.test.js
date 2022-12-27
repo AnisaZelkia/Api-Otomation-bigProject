@@ -7,8 +7,8 @@ describe('update Booking partial', () =>{
 
     it('Must successfully make a reservation when entering valid data', async () => {
         const param = getParams(data.bookingdatapartial);
-        const response = await HerokuApi.createbooking(param);
-
+        const response = await HerokuApi.partialupdatebooking(1);
+        
         assert.equal(response.status, 200);
         //console.log(response.data)
     })
