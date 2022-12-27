@@ -1,7 +1,7 @@
 import { assert } from "chai";
-import HerokuApi from '$root/pages/heroku.api';
-import * as data from '$root/data/user.data';
-import { getParams} from '$helper/lib-api';
+import HerokuApi from '../pages/heroku.api';
+import * as data from '../data/user.data';
+import { getParams} from '../helper/lib-api';
 
 
 
