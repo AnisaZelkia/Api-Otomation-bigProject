@@ -4,9 +4,22 @@ export const valid_login = {
     "password" : "password123"
 }
 
+export const token = {
+    token : "5cc89c89e850c6b",
+}
+
 export const BOOKING_PARAM = {
+    id : 1373
+}
+
+export const BOOKING_PARAM_INVALID = {
+    id : null
+}
+
+export const BOOKING_PARAM1 = {
     id : 1
 }
+
 export const delParam = {
     id : 2
 }
