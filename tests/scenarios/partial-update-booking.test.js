@@ -11,6 +11,5 @@ describe('update Booking partial', () =>{
         const response = await HerokuApi.partialupdatebooking(param);
 
         assert.equal(response.status, 200);
-        //done()
     })
 })

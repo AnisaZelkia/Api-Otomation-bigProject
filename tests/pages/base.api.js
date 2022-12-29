@@ -11,7 +11,19 @@ const BaseApi = axios.create({
         "Authorization" : "YWRtaW46cGFzc3dvcmQxMjM=]",
         "Cookie" : "token=5cc89c89e850c6b",
     },
-    validateStatus: function name(params) {
+    validateStatus: function () {
+        return true;
+    }
+})
+
+const BaseApiPacth = axios.create({
+    baseURL :process.env.BASE_URL,
+    headers : {
+        "Content-Type" : "application/json",
+        "Accept" : "application/json",
+        "Cookie" : "token=5cc89c89e850c6b",
+    },
+    validateStatus: function () {
         return true;
     }
 })

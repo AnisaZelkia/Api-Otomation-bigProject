@@ -4,12 +4,31 @@ export const valid_login = {
     "password" : "password123"
 }
 
+export const invalid_login = {
+    "username" : 0,
+    "password" : "password123"
+}
+
+export const invalid_login_passoword = {
+    "username" : "admin",
+    "password" : 0
+}
+
 export const token = {
     token : "5cc89c89e850c6b",
 }
 
+export const INVALID_BOOKING_PARAM = {
+    id : 0
+}
+
+export const getAllData = {
+    id : ""
+}
+
+
 export const BOOKING_PARAM = {
-    id : 1373
+    id : 1
 }
 
 export const BOOKING_PARAM_INVALID = {
@@ -26,15 +45,15 @@ export const delParam = {
 
 export const bookingdata = 
 { 
-    "firstname": "diosyy",
-    "lastname": "pratamaa",
-    "totalprice": 11101111,
+    "firstname": "diosyyy",
+    "lastname": "pratamaaa",
+    "totalprice": 1114,
     "depositpaid": false,
     "bookingdates": {
-        "checkin": "2022-1-1",
-        "checkout": "2022-1-5"
+        "checkin": "2022-1-6",
+        "checkout": "2022-7-7"
     },
-    "additionalneeds": "mangann"
+    "additionalneeds": "mangannn"
 }
 
 export const bookingdata1 = 
